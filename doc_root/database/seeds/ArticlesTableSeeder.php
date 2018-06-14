@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Article;
 
 class ArticlesTableSeeder extends Seeder
+{
     /**
      * Run the database seeds.
      *
