@@ -9,7 +9,7 @@
   <body class="p-3">
     <h1>「{{ $article->title }}」の削除</h1>
 
-    <form method='post' action="/delete">
+    <form method='post' action="/articles/delete">
         {{ csrf_field() }}
         <input type="hidden" name="id" value='{{ $article->id }}'>
         <div class="form-group">

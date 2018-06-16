@@ -9,7 +9,7 @@
   <body class="p-3">
     <h1>{{ $article->id }}の修正</h1>
 
-    <form method='post' action="/edit">
+    <form method='post' action="/articles/edit">
         {{ csrf_field() }}
         <input type="hidden" name="id" value='{{ $article->id }}'>
         <div class="form-group">

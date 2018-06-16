@@ -8,9 +8,7 @@
   </head>
   <body class="p-3">
     <h1>ブログ新規追加</h1>
-    <p><a href="/" class="btn btn-primary">一覧</a></p>
-
-    <form method='post' action="/create">
+    <form method='post' action="/articles/create">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="titleInput">タイトル</label>
