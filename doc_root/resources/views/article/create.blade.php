@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             <label for="bodyInput">ボディ</label>
-            <input type="text" class="form-control" id="bodyInput" name="body">
+            <textarea type="text" class="form-control" id="bodyInput" name="body"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">新規追加</button>
     </form>
