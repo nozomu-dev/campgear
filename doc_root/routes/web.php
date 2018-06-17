@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('articles', 'ArticleController@index');
-Route::get('articles/create', 'ArticleController@create');
-Route::post('articles/create', 'ArticleController@store');
-Route::get('articles/edit/{id}', 'ArticleController@edit');
-Route::post('articles/edit', 'ArticleController@update');
-Route::get('articles/delete/{id}', 'ArticleController@show');
-Route::post('articles/delete', 'ArticleController@delete');
+Route::get('/articles', 'ArticleController@index');
+Route::get('/articles/create', 'ArticleController@create');
+Route::post('/articles/create', 'ArticleController@store');
+Route::get('/articles/edit/{id}', 'ArticleController@edit');
+Route::post('/articles/edit', 'ArticleController@update');
+Route::get('/articles/delete/{id}', 'ArticleController@show');
+Route::post('/articles/delete', 'ArticleController@delete');
 
 Auth::routes();
 
