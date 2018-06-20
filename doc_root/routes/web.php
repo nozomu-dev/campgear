@@ -32,3 +32,6 @@ Route::get('/articles/edit/{id}', 'ArticleController@edit');
 Route::post('/articles/edit', 'ArticleController@update');
 Route::get('/articles/delete/{id}', 'ArticleController@show');
 Route::post('/articles/delete', 'ArticleController@delete');
+
+Route::resource('gears', 'GearController');
+Route::resource('repositories', 'RepositoryController');
