@@ -31,7 +31,7 @@ class GearController extends Controller
      */
     public function create()
     {
-        //
+        return view('gears.create');
     }
 
     /**
@@ -42,7 +42,15 @@ class GearController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gear = new Gear;
+        $gear->gear_name = $request->gear_name;
+        $gear->gear_category_id = $request->gear_category_id;
+        $gear->owning_user_id = $request->owning_user_id;
+        $gear->repository_id = $request->repository_id;
+        $gear->gear_description = $request->gear_description;
+        $gear->save();
+
+        return view('gears.store');
     }
 
     /**
