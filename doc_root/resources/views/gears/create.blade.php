@@ -13,7 +13,11 @@
 
             <div class="form-group">
                 <label for="inputGearCategoryId">ギアカテゴリー</label>
-                <input type="number" class="form-control" id="inputGearCategoryId" name="gear_category_id">
+                <select name="gear_category_id" id="inputGearCategoryId" class="form-control">
+                    @foreach ($gear_categories as $gear_category)
+                    <option value="{{ $gear_category->gear_category_id }}">{{ $gear_category->gear_category_name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">

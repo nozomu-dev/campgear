@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Gear;
+use App\GearCategory;
 
 class GearController extends Controller
 {
@@ -21,7 +22,7 @@ class GearController extends Controller
     public function index()
     {
         $gears = Gear::all();
-        return view('gears.index', ['gears'=> $gears]);
+        return view('gears.index', ['gears' => $gears]);
     }
 
     /**
@@ -31,7 +32,8 @@ class GearController extends Controller
      */
     public function create()
     {
-        return view('gears.create');
+        $gear_categories = GearCategory::all();
+        return view('gears.create', ['gear_categories' => $gear_categories]);
     }
 
     /**
