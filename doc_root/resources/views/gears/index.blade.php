@@ -8,7 +8,7 @@
         @foreach ($gears as $gear)
         <div class="card mb-2">
             <div class="card-body">
-                <h4 class="card-title">{{ $gear->gear_name }}</h4>
+                <h4 class="card-title"><a href="/gears/{{ $gear->gear_id }}">{{ $gear->gear_name }}</a></h4>
                 <h6 class="card-subtitle mb-2 text-muted">{{ $gear->updated_at }}</h6>
                 <p class="card-text">{{ $gear->gear_description }}</p>
                 <ul>
