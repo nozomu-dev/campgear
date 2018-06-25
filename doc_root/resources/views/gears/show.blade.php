@@ -2,34 +2,29 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title',  ['title' => '「' . $gear->gear_name . '」の詳細'])
+        @include('elements.title',  ['title' => '「' . $gear[0]->gear_name . '」の詳細'])
 
         <form method='post' action="/articles/delete">
             {{ csrf_field() }}
-            <input type="hidden" name="id" value='{{ $gear->gear_id }}'>
+            <input type="hidden" name="id" value='{{ $gear[0]->gear_id }}'>
             <div class="form-group">
-                <label for="inputGearName">ギア名</label>
-                <input readonly type="text" class="form-control" id="inputGearName" name="gear_name" value="{{ $gear->gear_name }}">
+                <b>ギア名：</b> {{ $gear[0]->gear_name }}
             </div>
 
             <div class="form-group">
-                <label for="inputGearCategoryId">ギアカテゴリー</label>
-                <input readonly type="number" class="form-control" id="inputGearCategoryId" name="gear_category_id" value="{{ $gear->gear_category_id }}">
+                <b>カテゴリー：</b> {{ $gear[0]->gear_category_name }} ( {{ $gear[0]->gear_category_id }} )
             </div>
 
             <div class="form-group">
-                <label for="inputOwningUserId">所有ユーザー</label>
-                <input readonly type="number" class="form-control" id="inputOwningUserId" name="owning_user_id" value="{{ $gear->owning_user_id }}">
+                <b>所有ユーザー：</b> {{ $gear[0]->name }} ( {{ $gear[0]->owning_user_id }} )
             </div>
 
             <div class="form-group">
-                <label for="inputRepositoryId">保管場所</label>
-                <input readonly type="number" class="form-control" id="inputRepositoryId" name="repository_id" value="{{ $gear->repository_id }}">
+                <b>保管場所：</b> {{ $gear[0]->repository_address }} ( {{ $gear[0]->repository_name }} )
             </div>
 
             <div class="form-group">
-                <label for="inutGearDescription">説明文</label>
-                <input readonly type="text" class="form-control" id="inutGearDescription" name="gear_description" value="{{ $gear->gear_description }}">
+                <b>説明文：</b> {{ $gear[0]->gear_description }}
             </div>
             <button class="btn btn-danger" type="submit">削除</button>
         </form>

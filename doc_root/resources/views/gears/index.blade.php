@@ -13,8 +13,8 @@
                 <p class="card-text">{{ $gear->gear_description }}</p>
                 <ul>
                     <li>ギアカテゴリ： {{ $gear->gear_category_id }} / {{ $gear->gear_category_name }}</li>
-                    <li>所有者：{{ $gear->owning_user_id }}</li>
-                    <li>保管場所：{{ $gear->repository_id }}</li>
+                    <li>所有者：{{ $gear->name }}</li>
+                    <li>保管場所：{{ $gear->repository_name }} / {{ $gear->repository_address }}</li>
                 </ul>
                 <a href="/gears/edit/{{ $gear->gear_id }}" class="card-link">修正</a>
                 <a href="/gears/delete/{{ $gear->gear_id }}" class="card-link text-danger">削除</a>

@@ -22,8 +22,11 @@ class GearController extends Controller
 
     public function index()
     {
-        $gears = \DB::table('gears')
+        // $gears = \DB::table('gears')
+        $gears = Gear::select()
                     ->leftjoin('gear_categories', 'gears.gear_category_id', '=' , 'gear_categories.gear_category_id')
+                    ->leftjoin('users', 'gears.owning_user_id', '=' , 'users.id')
+                    ->leftjoin('repositories', 'gears.repository_id', '=', 'repositories.repository_id')
                     ->get();
         return view('gears.index', ['gears' => $gears]);
     }
@@ -66,7 +69,13 @@ class GearController extends Controller
      */
     public function show($id)
     {
-        $gear = Gear::find($id);
+        // $gear = Gear::find($id);
+        $gear = Gear::leftjoin('gear_categories', 'gears.gear_category_id', '=' , 'gear_categories.gear_category_id')
+                    ->leftjoin('users', 'gears.owning_user_id', '=' , 'users.id')
+                    ->leftjoin('repositories', 'gears.repository_id', '=', 'repositories.repository_id')
+                    ->where('gears.gear_id', '=', $id)
+                    ->get();
+        // echo $gear;
         return view('gears.show', ['gear' => $gear]);
     }
 
