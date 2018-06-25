@@ -19,9 +19,12 @@ class GearController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $gears = Gear::all();
+        $gears = \DB::table('gears')
+                    ->leftjoin('gear_categories', 'gears.gear_category_id', '=' , 'gear_categories.gear_category_id')
+                    ->get();
         return view('gears.index', ['gears' => $gears]);
     }
 

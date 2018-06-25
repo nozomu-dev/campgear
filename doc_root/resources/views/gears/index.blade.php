@@ -12,12 +12,13 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{ $gear->updated_at }}</h6>
                 <p class="card-text">{{ $gear->gear_description }}</p>
                 <ul>
-                    <li>ギアカテゴリ：{{ $gear->gear_category_id }}</li>
+                    <li>ギアカテゴリ： {{ $gear->gear_category_id }} / {{ $gear->gear_category_name }}</li>
                     <li>所有者：{{ $gear->owning_user_id }}</li>
                     <li>保管場所：{{ $gear->repository_id }}</li>
                 </ul>
-                <a href="/gears/edit/{{ $gear->id }}" class="card-link">修正</a>
-                <a href="/gears/delete/{{ $gear->id }}" class="card-link text-danger">削除</a>
+                <a href="/gears/edit/{{ $gear->gear_id }}" class="card-link">修正</a>
+                <a href="/gears/delete/{{ $gear->gear_id }}" class="card-link text-danger">削除</a>
+
             </div>
         </div>
         @endforeach
