@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title', ['title' => 'ギア一覧'])
+        @include('elements.title', ['title' => '商品一覧'])
         <p><a href="/gears/create" class="btn btn-primary">新規追加</a></p>
 
         @foreach ($gears as $gear)
@@ -12,7 +12,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{ $gear->updated_at }}</h6>
                 <p class="card-text">{{ $gear->gear_description }}</p>
                 <ul>
-                    <li>ギアカテゴリ： {{ $gear->gear_category_id }} / {{ $gear->gear_category_name }}</li>
+                    <li>商品カテゴリ： {{ $gear->gear_category_id }} / {{ $gear->gear_category_name }}</li>
                     <li>所有者：{{ $gear->name }}</li>
                     <li>保管場所：{{ $gear->repository_name }} / {{ $gear->repository_address }}</li>
                 </ul>
