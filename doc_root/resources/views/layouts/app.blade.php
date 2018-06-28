@@ -49,10 +49,10 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="/gears">ギア一覧</a>
+                                <a class="nav-link" href="/gears">商品</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/repositories">保管場所一覧</a>
+                                <a class="nav-link" href="/repositories">保管場所</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
