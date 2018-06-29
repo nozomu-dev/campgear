@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title',  ['title' => '「' . $gear[0]->gear_name . '」の詳細'])
+        @include('elements.title',  ['title' => $gear[0]->gear_name ])
 
         <form id="gear_form" method='post' action="/gears/{{ $gear[0]->gear_id }}">
             {{ method_field('PUT') }}
@@ -54,17 +54,16 @@
             </div>
 
             <div class="text-right">
-                <button class="btn btn-danger" type="submit" onClick="deleteAction();">削除</button>
-                <button class="btn btn-default mr-3" type="submit" >変更を保存</button>
+                <button class="btn btn-default" type="submit" >変更を保存</button>
             </div>
-
+        </form>
+        <form action="/gears/{{ $gear[0]->gear_id }}" method="POST">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <div class="text-right mt-3">
+                <button class="btn btn-danger" type="submit">削除</button>
+            </div>
         </form>
     </div>
-
-    <script>
-        function deleteAction() {
-            document.getElementById('gear_form').action = '/gear/delete/' + {{ $gear[0]->gear_id }};
-        }
-    </script>
 
 @endsection

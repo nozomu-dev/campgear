@@ -142,6 +142,7 @@ class GearController extends Controller
      */
     public function destroy($id)
     {
-        echo 'fuck';
+        Gear::destroy($id);
+        return view('gears.store', ['message' => '削除しました。']);
     }
 }
