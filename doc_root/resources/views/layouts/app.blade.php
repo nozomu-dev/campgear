@@ -52,6 +52,12 @@
                                 <a class="nav-link" href="/gears">商品</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/gear_categories">商品カテゴリー</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">ユーザー</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/repositories">保管場所</a>
                             </li>
                             <li class="nav-item dropdown">
