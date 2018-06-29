@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title',  ['title' => 'ギアを追加しました。'])
+        @include('elements.title',  ['title' => '商品を追加しました。'])
 
         <div class="alert alert-primary">
             追加しました。

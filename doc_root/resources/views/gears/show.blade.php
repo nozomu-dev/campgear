@@ -8,11 +8,11 @@
             {{ csrf_field() }}
             <input type="hidden" name="id" value='{{ $gear[0]->gear_id }}'>
             <div class="form-group">
-                <b>ギア名：</b> {{ $gear[0]->gear_name }}
+                <b>商品名：</b> {{ $gear[0]->gear_name }}
             </div>
 
             <div class="form-group">
-                <b>カテゴリー：</b> {{ $gear[0]->gear_category_name }} ( {{ $gear[0]->gear_category_id }} )
+                <b>商品カテゴリー：</b> {{ $gear[0]->gear_category_name }} ( {{ $gear[0]->gear_category_id }} )
             </div>
 
             <div class="form-group">

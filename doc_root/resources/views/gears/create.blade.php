@@ -2,17 +2,17 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title', ['title' => 'ギアの新規追加'])
+        @include('elements.title', ['title' => '商品の新規追加'])
 
         <form method='post' action="/gears/">
             {{ csrf_field() }}
             <div class="form-group">
-                <label for="inputGearName">ギア名</label>
+                <label for="inputGearName">商品名</label>
                 <input type="text" class="form-control" id="inputGearName" name="gear_name">
             </div>
 
             <div class="form-group">
-                <label for="inputGearCategoryId">ギアカテゴリー</label>
+                <label for="inputGearCategoryId">商品カテゴリー</label>
                 <select name="gear_category_id" id="inputGearCategoryId" class="form-control">
                     @foreach ($gear_categories as $gear_category)
                     <option value="{{ $gear_category->gear_category_id }}">{{ $gear_category->gear_category_name }}</option>
@@ -35,7 +35,7 @@
                 <input type="text" class="form-control" id="inutGearDescription" name="gear_description">
             </div>
 
-            <button class="btn btn-primary" type="submit">ギアを新規追加</button>
+            <button class="btn btn-primary" type="submit">商品を新規追加</button>
         </form>
     </div>
 @endsection
