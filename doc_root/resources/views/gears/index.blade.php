@@ -16,9 +16,6 @@
                     <li>所有者：{{ $gear->name }}</li>
                     <li>保管場所：{{ $gear->repository_name }} / {{ $gear->repository_address }}</li>
                 </ul>
-                <a href="/gears/{{ $gear->gear_id }}/edit" class="card-link">修正</a>
-                <a href="/gears/delete/{{ $gear->gear_id }}" class="card-link text-danger">削除</a>
-
             </div>
         </div>
         @endforeach
