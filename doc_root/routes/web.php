@@ -34,4 +34,5 @@ Route::get('/articles/delete/{id}', 'ArticleController@show');
 Route::post('/articles/delete', 'ArticleController@delete');
 
 Route::resource('gears', 'GearController');
+Route::resource('gear_categories', 'GearCategoryController');
 Route::resource('repositories', 'RepositoryController');
