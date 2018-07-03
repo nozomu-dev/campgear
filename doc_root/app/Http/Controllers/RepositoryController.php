@@ -31,7 +31,7 @@ class RepositoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('repositories.create');
     }
 
     /**
@@ -42,7 +42,12 @@ class RepositoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $repository = new Repository;
+        $repository->repository_name = $request->repository_name;
+        $repository->repository_address = $request->repository_address;
+        $repository->save();
+
+        return view('repositories.store', ['message' => '保管場所を作成しました。']);
     }
 
     /**
