@@ -69,7 +69,8 @@ class RepositoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $repository = Repository::find($id);
+        return view('repositories.edit', ['repository'=> $repository]);
     }
 
     /**
@@ -81,7 +82,12 @@ class RepositoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $repository = Repository::find($id);
+        $repository->repository_name = $request->repository_name;
+        $repository->repository_address = $request->repository_address;
+        $repository->save();
+
+        return view('repositories.store', ['message'=> '変更を保存しました。']);
     }
 
     /**
@@ -92,6 +98,7 @@ class RepositoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Repository::destroy($id);
+        return view('repositories.store', ['message'=> ' 削除しました。']);
     }
 }
