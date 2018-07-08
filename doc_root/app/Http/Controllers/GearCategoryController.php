@@ -52,6 +52,6 @@ class GearCategoryController extends Controller
     public function destroy($id)
     {
         GearCategory::destroy($id);
-        return view('gear_categories.store', ['message' => '書品カテゴリーを削除しました。']);
+        return view('gear_categories.store', ['message' => '商品カテゴリーを削除しました。']);
     }
 }
