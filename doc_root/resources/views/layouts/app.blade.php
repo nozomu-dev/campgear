@@ -55,6 +55,9 @@
                                 <a class="nav-link" href="/gear_categories">商品カテゴリー</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/user_groups">ユーザーグループ</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/users">ユーザー</a>
                             </li>
                             <li class="nav-item">
