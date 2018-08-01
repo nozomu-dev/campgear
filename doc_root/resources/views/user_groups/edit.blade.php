@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        @include('elements.title', ['title' => '保管場所'])
+        @include('elements.title', ['title' => 'ユーザーグループ'])
 
         <form method='post' action="/user_groups/{{$user_group->user_group_id}}">
             {{ method_field('PUT') }}
@@ -11,7 +11,7 @@
             <input type="hidden" name="id" value='{{ $user_group->user_group_id }}'>
 
             <div class="form-group">
-                <label for="user_group_name">保管場所名</label>
+                <label for="user_group_name">ユーザーグループ名</label>
                 <input type="text" class="form-control" id="user_group_name" name="user_group_name" value="{{$user_group->user_group_name}}">
             </div>
 
