@@ -15,7 +15,7 @@ class RepositoriesTableSeeder extends Seeder
     {
         for($i = 1; $i <= 10; $i++) {
             $repository = new Repository;
-            $repository->repository_name = '保管場所名' . $i;
+            $repository->repository_name = '保管場所' . $i;
             $repository->repository_address = '兵庫県尼崎市水堂町3重目17-27 デイグラン武庫之荘308号' . $i;
             $repository->save();
         }

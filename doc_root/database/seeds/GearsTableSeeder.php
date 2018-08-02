@@ -15,7 +15,7 @@ class GearsTableSeeder extends Seeder
     {
         for($i = 1; $i <= 10; $i++) {
             $gear = new Gear;
-            $gear->gear_name = 'ギアネーム' . $i;
+            $gear->gear_name = '商品' . $i;
             $gear->gear_category_id = $i;
             $gear->owning_user_id = $i;
             $gear->repository_id = $i;
